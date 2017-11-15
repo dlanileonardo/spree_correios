@@ -6,7 +6,7 @@ module Spree
     
     def shipping_method
       if has_contract?
-        :pac_com_contrato
+        :pac_com_contrato_2
       else
         :pac
       end
@@ -14,9 +14,9 @@ module Spree
     
     def shipping_code
       if has_contract?
-        41068
+        '04669'
       else
-        41106
+        '41106'
       end
     end
   end
