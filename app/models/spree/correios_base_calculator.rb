@@ -1,5 +1,5 @@
 module Spree
-  class Calculator::CorreiosBaseCalculator < ShippingCalculator
+  class CorreiosBaseCalculator < ShippingCalculator
 
     preference :zipcode, :string
     preference :token, :string
@@ -46,6 +46,7 @@ module Spree
       end
 
       webservice = calculator.calculate(shipping_method)
+
       return 0.0 if webservice.erro?
       @delivery_time = webservice.prazo_entrega
       webservice.valor

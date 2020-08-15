@@ -11,3 +11,4 @@ end
 gemspec
 
 gem 'spree', git: 'https://github.com/spree/spree.git'
+gem 'pry'

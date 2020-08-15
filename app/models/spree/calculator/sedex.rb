@@ -1,17 +1,17 @@
 module Spree
-  class Calculator::SEDEX < Calculator::CorreiosBaseCalculator
+  class Calculator::Sedex < CorreiosBaseCalculator
     def self.description
       "SEDEX"
     end
-    
+
     def shipping_method
       if has_contract?
-	:sedex_com_contrato_6
+  :sedex_com_contrato_6
       else
         :sedex
       end
     end
-    
+
     def shipping_code
       if has_contract?
         '04162'

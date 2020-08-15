@@ -1,9 +1,9 @@
 module Spree
-  class Calculator::PAC < Calculator::CorreiosBaseCalculator
+  class Calculator::Pac < CorreiosBaseCalculator
     def self.description
       "PAC"
     end
-    
+
     def shipping_method
       if has_contract?
         :pac_com_contrato_2
@@ -11,7 +11,7 @@ module Spree
         :pac
       end
     end
-    
+
     def shipping_code
       if has_contract?
         '04669'
